@@ -16,7 +16,7 @@ def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
     """)
     if len(res.fetchall()) == 0:
         cur.execute("""
-            CREATE TABLE files(org_name TEXT, cur_name TEXT, content TEXT)
+            CREATE TABLE files(org_name TEXT, cur_name TEXT, path TEXT)
         """)
         con.commit()
     cur.close()
@@ -47,12 +47,10 @@ class DatasetManager:
             name = filename
 
         cur = self.con.cursor()
-        with open(path) as f:
-            # TODO: Hold the file path instead of file content for efficiency.
-            cur.execute("""
-                INSERT INTO files VALUES('{0}', '{0}', '{1}')
-            """.format(name, f.read()))
-            self.con.commit()
+        cur.execute("""
+            INSERT INTO files VALUES('{0}', '{0}', '{1}')
+        """.format(name, path))
+        self.con.commit()
         cur.close()
 
     def retrieve(self, name: str):
@@ -61,12 +59,14 @@ class DatasetManager:
         """
         cur = self.con.cursor()
         res = cur.execute("""
-            SELECT content FROM files WHERE cur_name='{0}'
+            SELECT path FROM files WHERE cur_name='{0}'
         """.format(name))
-        content = res.fetchone()
-        assert content, "no such file exist on database, {0}".format(name)
+        path = res.fetchone()
+        assert path, "no such file exist on database, {0}".format(name)
         cur.close()
-        return content[0]
+
+        with open(path[0]) as f:
+            return f.read()
 
     def update(self, old_name: str, new_name: str):
         """
