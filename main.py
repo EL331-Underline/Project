@@ -6,6 +6,11 @@ def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
     """
     Connect to specified database and create `files` table if it not exist.
     Returns `Connection` to `database`.
+
+    `files` has three columns:
+    - `org_name` is original name of the file
+    - `cur_name` is updated name of the file
+    - `path` is the absolute path of the file
     """
     con = sqlite3.connect(database)
     cur = con.cursor()
@@ -36,9 +41,8 @@ class DatasetManager:
 
     def create(self, path: str | os.PathLike, name: str | None):
         """
-        Read a content in `path` and store it to `database`.
-        `org_name` and `cur_name` will be `name` if it isn't None.
-        We use file name in `path` if `name` is None.
+        Store the path with `org_name` and `cur_name` is `name`.
+        If `name` is None, use file name in `path` instead.
         """
         path = os.path.abspath(path)
         _, filename = os.path.split(path)
