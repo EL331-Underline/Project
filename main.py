@@ -2,7 +2,7 @@ import sqlite3
 import os
 
 
-def connect_database(database):
+def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
     """
     Connect to specified database and create `files` table if it not exist.
     Returns `Connection` to `database`.
@@ -23,66 +23,69 @@ def connect_database(database):
     return con
 
 
-def create(path, database):
+class DatasetManager:
     """
-    Read a content in `path` and store it to `database`.
-    `org_name` and `cur_name` will be the file name in `path`.
+    A simple dataset manager
     """
-    path = os.path.abspath(path)
-    _, filename = os.path.split(path)
 
-    con = connect_database(database)
-    cur = con.cursor()
-    with open(path) as f:
-        # TODO: Hold the file path instead of file content for efficiency.
+    def __init__(self, database: str | os.PathLike):
+        self.con = connect_database(database)
+
+    def __del__(self):
+        self.con.close()
+
+    def create(self, path: str | os.PathLike, name: str | None):
+        """
+        Read a content in `path` and store it to `database`.
+        `org_name` and `cur_name` will be `name` if it isn't None.
+        We use file name in `path` if `name` is None.
+        """
+        path = os.path.abspath(path)
+        _, filename = os.path.split(path)
+        assert len(filename) != 0, "no file name in path"
+        if name is None:
+            name = filename
+
+        cur = self.con.cursor()
+        with open(path) as f:
+            # TODO: Hold the file path instead of file content for efficiency.
+            cur.execute("""
+                INSERT INTO files VALUES('{0}', '{0}', '{1}')
+            """.format(name, f.read()))
+            self.con.commit()
+        cur.close()
+
+    def retrieve(self, name: str):
+        """
+        Fetch the file content from `database` where the name is `name`.
+        """
+        cur = self.con.cursor()
+        res = cur.execute("""
+            SELECT content FROM files WHERE cur_name='{0}'
+        """.format(name))
+        content = res.fetchone()
+        assert content, "no such file exist on database, {0}".format(name)
+        cur.close()
+        return content[0]
+
+    def update(self, old_name: str, new_name: str):
+        """
+        Update the file name so that user can fetch the content with `new_name`
+        """
+        cur = self.con.cursor()
         cur.execute("""
-            INSERT INTO files VALUES('{0}', '{0}', '{1}')
-        """.format(filename, f.read()))
-    con.commit()
+            UPDATE files SET cur_name='{1}' WHERE cur_name='{0}'
+        """.format(old_name, new_name))
+        self.con.commit()
+        cur.close()
 
-    cur.close()
-    con.close()
-
-
-def retrieve(name, database):
-    """
-    Fetch the file content from `database` where the name is `name`.
-    """
-    con = connect_database(database)
-    cur = con.cursor()
-    res = cur.execute("""
-        SELECT content FROM files WHERE cur_name='{0}'
-    """.format(name))
-    content = res.fetchone()
-    assert content, "no such file exist on database, {0}".format(name)
-    cur.close()
-    con.close()
-    return content[0]
-
-
-def update(old_name, new_name, database):
-    """
-    Update the file name so that user can fetch the content with `new_name`
-    """
-    con = connect_database(database)
-    cur = con.cursor()
-    cur.execute("""
-        UPDATE files SET cur_name='{1}' WHERE cur_name='{0}'
-    """.format(old_name, new_name))
-    con.commit()
-    cur.close()
-    con.close()
-
-
-def delete(name, database):
-    """
-    Delete a file from database where the current name is `name`.
-    """
-    con = connect_database(database)
-    cur = con.cursor()
-    cur.execute("""
-        DELETE FROM files WHERE cur_name='{0}'
-    """.format(name))
-    con.commit()
-    cur.close()
-    con.close()
+    def delete(self, name: str):
+        """
+        Delete a file from database where the current name is `name`.
+        """
+        cur = self.con.cursor()
+        cur.execute("""
+            DELETE FROM files WHERE cur_name='{0}'
+        """.format(name))
+        self.con.commit()
+        cur.close()
