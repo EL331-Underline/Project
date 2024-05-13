@@ -53,7 +53,7 @@ class DatasetManager:
         self.con.commit()
         cur.close()
 
-    def retrieve(self, name: str):
+    def retrieve(self, name: str) -> str:
         """
         Fetch the file content from `database` where the name is `name`.
         """
@@ -67,6 +67,19 @@ class DatasetManager:
 
         with open(path[0]) as f:
             return f.read()
+
+    def retrieve_names(self) -> list[str]:
+        """
+        Fetch all names in database.
+        """
+        cur = self.con.cursor()
+        res = cur.execute("""
+            SELECT cur_name FROM files
+        """)
+        names = []
+        for name in res.fetchall():
+            names.append(name[0])
+        return names
 
     def update(self, old_name: str, new_name: str):
         """
@@ -89,3 +102,26 @@ class DatasetManager:
         """.format(name))
         self.con.commit()
         cur.close()
+
+
+class SimpleSearcherQuery:
+    pass
+
+
+class SimpleSearcherResult:
+    pass
+
+
+class SimpleSearcher:
+    """
+    A class which provide a simple operations on specified dataset.
+    """
+
+    def __init__(self, database: str | os.PathLike):
+        self.manager = DatasetManager(database)
+
+    def __del__(self):
+        del self.manager
+
+    def search(self, query: SimpleSearcherQuery) -> SimpleSearcherResult:
+        pass
