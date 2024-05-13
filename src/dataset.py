@@ -1,5 +1,6 @@
 import sqlite3
 import os
+import unittest
 
 
 def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
@@ -26,6 +27,11 @@ def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
         con.commit()
     cur.close()
     return con
+
+
+class TestConnectDatabase(unittest.TestCase):
+    def test_connect_database(self):
+        pass
 
 
 class DatasetManager:
@@ -106,3 +112,24 @@ class DatasetManager:
         """.format(name))
         self.con.commit()
         cur.close()
+
+
+class TestDatasetManager(unittest.TestCase):
+    def test_create(self):
+        pass
+
+    def test_retrieve(self):
+        pass
+
+    def test_retrieve_names(self):
+        pass
+
+    def test_update(self):
+        pass
+
+    def test_delete(self):
+        pass
+
+
+if __name__ == "__main__":
+    unittest.main()

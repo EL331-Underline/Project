@@ -1,5 +1,6 @@
 import os
 import dataset
+import unittest
 
 
 class SimpleSearcherQuery:
@@ -23,3 +24,12 @@ class SimpleSearcher:
 
     def search(self, query: SimpleSearcherQuery) -> SimpleSearcherResult:
         pass
+
+
+class TestSimpleSearcher(unittest.TestCase):
+    def test_search(self):
+        pass
+
+
+if __name__ == "__main__":
+    unittest.main()
