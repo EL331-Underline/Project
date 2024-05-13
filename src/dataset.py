@@ -106,26 +106,3 @@ class DatasetManager:
         """.format(name))
         self.con.commit()
         cur.close()
-
-
-class SimpleSearcherQuery:
-    pass
-
-
-class SimpleSearcherResult:
-    pass
-
-
-class SimpleSearcher:
-    """
-    A class which provide a simple operations on specified dataset.
-    """
-
-    def __init__(self, database: str | os.PathLike):
-        self.manager = DatasetManager(database)
-
-    def __del__(self):
-        del self.manager
-
-    def search(self, query: SimpleSearcherQuery) -> SimpleSearcherResult:
-        pass
