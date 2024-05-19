@@ -115,21 +115,32 @@ class DatasetManager:
 
 
 class TestDatasetManager(unittest.TestCase):
+    def __init__(self):
+        self.database  = DatasetManager("nyanya")
     def test_create(self):
-        pass
+        self.database.create("ito/aaaa.txt","aaaa")
 
     def test_retrieve(self):
-        pass
+        print(self.database.retrieve("aaaa"))
 
     def test_retrieve_names(self):
-        pass
+        print(self.database.retrieve_names())
 
     def test_update(self):
-        pass
+        old_name = "aaaa"
+        new_name = "bbbb"
+        print(self.database.retrieve_names())
+        self.database.update(old_name,new_name)
+        print(self.database.retrieve_names())
+
 
     def test_delete(self):
-        pass
+        self.database.delete("bbbb")
+        print(self.database.retrieve_names())
+
+
 
 
 if __name__ == "__main__":
     unittest.main()
+
