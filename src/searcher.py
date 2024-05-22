@@ -87,7 +87,7 @@ class Searcher:
                     left = []
                     mid = []
                     right = []
-                    for k in range(max(0, j-11, j-1)):
+                    for k in range(max(0, j-11), j-1):
                         left.append(text[k])
 
                     for k in range(j+1, min(j+11, text_size)):
