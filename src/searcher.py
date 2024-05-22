@@ -58,7 +58,28 @@ class Searcher:
         del self.manager
 
     def search(self, query: SearcherQuery) -> SearcherResult:
-        pass
+        names = self.manager.retrieve_names()
+        result = []
+        for name in names:
+            text = retrieve(name).split()
+            text_size = len(text)
+            for j in range(text):
+                if(text == word):
+                    left = []
+                    mid = []
+                    right = []
+                    for k in range(max(0,j-10,j):
+                        left.append(text[k])
+                    
+                    for k in range(j+1,min(j+10,text_size)):
+                        right.append(text[k])
+                    
+                    mid.append(text[j])
+                    result.append(SearcherResultElement(left,mid,right);
+        return  SearcherResult(result):
+
+
+
 
 
 class TestSearcher(unittest.TestCase):
