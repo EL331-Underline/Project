@@ -30,6 +30,12 @@ class SearcherResultElement:
         self.target = target
         self.right = right
 
+    def left_visual_len(self):
+        left_len = len(self.left)
+        for s in self.left:
+            left_len += len(s)
+        return left_len
+
 
 class SearcherResult:
     """
@@ -40,7 +46,20 @@ class SearcherResult:
         self.result = result
 
     def colorize(self):
-        pass
+        left_len = 0
+        for element in self.result:
+            left_len = max(left_len, element.left_visual_len())
+        for element in self.result:
+            print(" " * (left_len - element.left_visual_len()), end="")
+            for s in element.left:
+                print(s + " ", end="")
+            print("\033[31m", end="")
+            for s in element.target:
+                print(s + " ", end="")
+            print("\033[0m", end="")
+            for s in element.right:
+                print(s + " ", end="")
+            print()
 
     def save(self, path: str | os.PathLike):
         pass
