@@ -61,25 +61,22 @@ class Searcher:
         names = self.manager.retrieve_names()
         result = []
         for name in names:
-            text = retrieve(name).split()
+            text = self.manager.retrieve(name).split()
             text_size = len(text)
-            for j in range(text):
-                if(text == word):
+            for j in range(text_size):
+                if (text[j] == query.body):
                     left = []
                     mid = []
                     right = []
-                    for k in range(max(0,j-10,j):
+                    for k in range(max(0, j-11, j-1)):
                         left.append(text[k])
-                    
-                    for k in range(j+1,min(j+10,text_size)):
+
+                    for k in range(j+1, min(j+11, text_size)):
                         right.append(text[k])
-                    
+
                     mid.append(text[j])
-                    result.append(SearcherResultElement(left,mid,right);
-        return  SearcherResult(result):
-
-
-
+                    result.append(SearcherResultElement(left, mid, right))
+        return SearcherResult(result)
 
 
 class TestSearcher(unittest.TestCase):
