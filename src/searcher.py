@@ -5,12 +5,20 @@ import datetime
 from typing import Literal
 
 
-class SimpleSearcherQuery:
-    pass
+SearcherQueryKind = Literal["word token"]
 
 
-class SimpleSearcherResult:
-    pass
+SearcherQueryBody = str
+
+
+class SearcherQuery:
+    """
+    A wrapper class to hold the kind of search and its body used for search.
+    """
+
+    def __init__(self, kind: SearcherQueryKind, body: SearcherQueryBody):
+        self.kind = kind
+        self.body = body
 
 
 class SearcherResultElement:
@@ -116,7 +124,7 @@ class Searcher:
         return SearcherResult(number, query.body, result)
 
 
-class TestSimpleSearcher(unittest.TestCase):
+class TestSearcher(unittest.TestCase):
     def test_search(self):
         pass
 
