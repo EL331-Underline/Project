@@ -1,6 +1,7 @@
 import os
 import dataset
 import unittest
+import datetime
 from typing import Literal
 
 
@@ -42,7 +43,11 @@ class SearcherResult:
     The result of search `Searcher.search` will returns.
     """
 
-    def __init__(self, result: list[SearcherResultElement]):
+    def __init__(
+        self, number: int, body: str, result: list[SearcherResultElement]
+    ):
+        self.number = number
+        self.body = body
         self.result = result
 
     def colorize(self):
@@ -62,7 +67,25 @@ class SearcherResult:
             print()
 
     def save(self, path: str | os.PathLike):
-        pass
+        date = datetime.datetime.today().date()
+        date = "{:04}{:02}{:02}".format(date.year, date.month, date.day)
+        time = datetime.datetime.today().time()
+        time = "{:02}{:02}".format(time.hour, time.minute)
+        path = "{:03}-{}-{}-{}".format(self.number, date, time, self.body)
+        with open(path, mode="w+") as f:
+            for element in self.result:
+                f.write("left: ")
+                for s in element.left:
+                    f.write(s + " ")
+                f.write("\n")
+                f.write("target: ")
+                for s in element.target:
+                    f.write(s + " ")
+                f.write("\n")
+                f.write("right: ")
+                for s in element.right:
+                    f.write(s + " ")
+                f.write("\n")
 
 
 class Searcher:
@@ -71,6 +94,7 @@ class Searcher:
     """
 
     def __init__(self, database: str | os.PathLike):
+        self.counter = 0
         self.manager = dataset.DatasetManager(database)
 
     def __del__(self):
@@ -95,7 +119,9 @@ class Searcher:
 
                     mid.append(text[j])
                     result.append(SearcherResultElement(left, mid, right))
-        return SearcherResult(result)
+        number = self.counter
+        self.counter += 1
+        return SearcherResult(number, query.body, result)
 
 
 class TestSearcher(unittest.TestCase):
