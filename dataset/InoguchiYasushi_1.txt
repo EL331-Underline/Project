@@ -25,7 +25,7 @@ in such an open and highly dynamic computing environment, efficient task schedul
 is essential in choosing which collection of distributed resources to use [2,3]. Also, by
 using mechanisms such as CORBA [4], Java RMI [5], and emerging GridRPC [6], a
 task can be scheduled to execute on any of the Grid nodes. Obviously, choosing a
-node would become much easier if the scheduler could know the taskÅfs running time
+node would become much easier if the scheduler could know the task‚Äôs running time
 on the nodes beforehand.
 *Corresponding author. Email: duytvt@jaist.ac.jp
 In fact, the running time of a task, which varies as a result of CPU availability,
@@ -83,7 +83,7 @@ Another more accurate approach uses tendency-based prediction techniques
 next value will also increase, and vice versa. In [11], Yang et al. proposed a number
 of one-step-ahead prediction strategies which give more weight to more recent
 measurements than to other historical data, while paying attention to different
-behaviours when ÅgascendingÅh and ÅgdescendingÅh. One better strategy based on
+behaviours when ‚Äúascending‚Äù and ‚Äúdescending‚Äù. One better strategy based on
 tendency with several backward steps was introduced by Zhang et al. in [12], using
 polynomial fitting method to produce the prediction values. Although these models
 generally perform well, they have a glaring error source, committing great errors
@@ -173,14 +173,14 @@ c,1 w
 c,2 w
 c,3 w
 c,4 w
-h(É∞) c O
+h(Œ£) c O
 ??
 ??
 ?
 = +
 = +
 ?
-= É∞
+= Œ£
 x if output layer node
 if hidden layer node
 where h x e
@@ -211,7 +211,7 @@ Figure 1. A three-layer feedforward network.
 ?
 = +
 ?
-= É∞
+= Œ£
 x if output layer node
 if hidden layer node
 where h x e
@@ -237,12 +237,12 @@ computed with Equation 2.
 Then these errors are propagated sequentially backward from right to left to
 calculate errors for hidden layer nodes based on Equation 3.
 where Oc is the output of the current hidden layer node, n is the number of nodes in
-the next layer, É¬i is the error for a node in the next layer and wi,c is the weight
+the next layer, Œ¥i is the error for a node in the next layer and wi,c is the weight
 modifying the corresponding connection from the current node to that node.
 Step 3: For each connection, the change in the weight modifying the
 connection from node c to node p is computed using Equation 4 and added to the
 weight.
-where Éø is the learning rate of the network, É¬c is the error of node c and Op is the
+where Œ± is the learning rate of the network, Œ¥c is the error of node c and Op is the
 output of node p. The learning rate controls how quickly and how finely the network
 converges to a solution. The network was trained with different learning rate values
 ranging from 0.01 to 0.3 in our experiments.
@@ -251,21 +251,21 @@ training data set, one epoch occurs. The final goal is to find the weights that 
 a certain overall error measure, such as the sum of squared errors or mean squared
 errors. We evaluate the accuracy of our predictions using the widely used normalized
 mean squared errors (NMSE) defined as follows:
-where É–2 is the variance of the time series in the period with N examples, and Oi and
+where œÉ2 is the variance of the time series in the period with N examples, and Oi and
 Di are, respectively, the predicted and the desired outputs at time i.
-c c c É¬ = D ?O
-( )É∞=
+c c c Œ¥ = D ?O
+( )Œ£=
 = ?
 n
 i
 c c c i i c O O w
 1
-, É¬ 1 É¬
-c p c p É¢w =ÉøÉ¬ O ,
+, Œ¥ 1 Œ¥
+c p c p Œîw =Œ±Œ¥ O ,
 (2)
 (3)
 (4)
-( ) É∞=
+( ) Œ£=
 = ?
 N
 i
@@ -276,7 +276,7 @@ NMSE
 2
 2
 1
-É–
+œÉ
 (5)
 4. Experimental evaluation
 4.1. Input parameters
@@ -380,9 +380,9 @@ i ?
 = + (6)
 Prediction error 1 | | 100%
 1
-Å~
+√ó
 ?
-= É∞=
+= Œ£=
 N
 i i
 i i
@@ -429,7 +429,7 @@ themis. Likewise, SD has values in the range [5.1%, 5.7%] in axp0, [4.8%, 5.2%] 
 axp7, [7.8%, 8.5%] in sahara, and [2.5%, 3.3%] in themis. The choices of learning
 rate and network architecture, again, do not affect the variation, since it is quite small.
 The learning rate and network architecture have a significant impact on the
-networksÅf training time, as shown in Table 4. With the same training set and the same
+networks‚Äô training time, as shown in Table 4. With the same training set and the same
 network architecture, the lowest learning rate of 0.01 always results in the longest
 Table 3. Mean and Standard Deviation (SD) of the prediction errors.
 (a) axp0
@@ -652,7 +652,7 @@ have the same size of 10,000 samples, quite small compared to those by Dinda but
 good enough for our validation.
 We ran several experiments to evaluate the selected networks of 20:10:1 and
 30:10:1 with a constant learning rate of 0.3 on these two load traces, along with axp0
-as the representative of DindaÅfs load traces, for cases of 10,000 and 5,000 samples.
+as the representative of Dinda‚Äôs load traces, for cases of 10,000 and 5,000 samples.
 The experimental results are shown in Table 6, where abyss and mystere stand for
 abyss.cs.uchicago.edu and mystere.ucsd.edu respectively. As expected, both networks
 have exhibited high prediction accuracy and low overhead with not much difference
@@ -703,7 +703,7 @@ Acknowledgements
 We would like to thank Dinda and Yang for the use of their collected load traces. Thanks are also due
 to the anonymous reviewers for their valuable comments to help improve this work. This research has
 been partially supported by Ministry of Education, Culture, Sports, Science and Technology of Japan
-under the Åg21st Century COE ProgramÅh.
+under the ‚Äú21st Century COE Program‚Äù.
 References
 [1] I. Foster and C. Kesselman, The Grid: Blueprint for a New Computing
 Infrastructure, Morgan Kaufmann Publishers, San Francisco, 1999.
