@@ -2,6 +2,7 @@ import os
 import dataset
 import unittest
 import datetime
+from tempfile import NamedTemporaryFile
 from typing import Literal
 
 
@@ -125,8 +126,24 @@ class Searcher:
 
 
 class TestSearcher(unittest.TestCase):
-    def test_search(self):
-        pass
+    def test_search_with_word_token(self):
+        with NamedTemporaryFile(suffix="db") as db, NamedTemporaryFile() as f1:
+            with open(f1.name, "w+") as wf1:
+                wf1.write(
+                    "this is the test sentence that will be used at test")
+
+            m = dataset.DatasetManager(db.name)
+            m.create(f1.name, None)
+            del m
+
+            s = Searcher(db.name)
+            r = s.search(SearcherQuery("word token", "that"))
+            assert len(r.result) == 1
+            assert r.result[0].left == [
+                "this", "is", "the", "test", "sentence"]
+            assert r.result[0].target == ["that"]
+            assert r.result[0].right == [
+                "will", "be", "used", "at", "test"]
 
 
 if __name__ == "__main__":
