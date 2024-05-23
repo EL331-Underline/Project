@@ -12,7 +12,7 @@ hard palate by adjusting the location of vowel articulation points. To evaluate 
 right phonemes on the target phoneme, three-phoneme sequences, consisting of five Japanese vowels
 (V) and ten apical and two palatal consonants (C), were extracted from read sentences and used in this
 analysis. A stepwise multiple regression method was used to analyze the phoneme sequences, in order
-to evaluate the eecontributionsff of the surrounding phonemes to the central one. The results showed
+to evaluate the â€˜â€˜contributionsâ€™â€™ of the surrounding phonemes to the central one. The results showed
 that the horizontal component of the articulatory movement had a dominant function during
 articulation. The movement of the tongue tip was highly correlated to the tongue dorsum movement in
 the horizontal dimension, but was almost independent in the vertical dimension. This phenomenon
@@ -44,7 +44,7 @@ lips move from the preceding phoneme toward the
 following one. In this case, the target of this phoneme is
 reached in different ways, depending on the status of the
 previous phoneme. Anticipatory (RL) coarticulation can
-occur only if the speaker can eelook aheadff in time and
+occur only if the speaker can â€˜â€˜look aheadâ€™â€™ in time and
 anticipate oncoming sounds. While LR coarticulation
 occurs at the physiological level, RL coarticulation reflects
 a high-level (central) type of phonological-phonetic processing,
@@ -54,7 +54,7 @@ phonemic-segment model [2]. Each segment with multiple
 phonemes was described in a matrix of articulatory target
 features, in which some features change abruptly as the
 targets vary from one to another.
-ON
+OÂ¨
 hman investigated coarticulation in VCV utterances
 using spectrographical measurements, in which three stop
 e-mail: jdang@jaist.ac.jp
@@ -236,20 +236,20 @@ almost horizontally for one of the speakers. In that
 situation, it was difficult to obtain a reliable correlation
 of the vertical and horizontal directions. In contrast, the
 proposed articulatory coordinate provides a proper reference
-for calibrating the speakersf head during the EMA
+for calibrating the speakersâ€™ head during the EMA
 Fig. 3 Distribution of the CP (T3) of five Japanese vowels from one speaker. The left panels show the location of the CPs
-in the articulatory space (dimensions in cm); the right panels show the relative frequency of the CPfs appearance in each
+in the articulatory space (dimensions in cm); the right panels show the relative frequency of the CPâ€™s appearance in each
 location (section number).
 J. DANG et al.: COARTICULATION IN CONTINUOUS SPEECH
 321
 experiments. The calibration using the proposed coordinate
 derives a maximum projection on the horizontal axis for
 both the vocalic and consonantal movements, as shown in
-Fig. 2. In the following part of the paper, eehorizontalff and
-eeXff indicate the same axis, where the former is mainly
+Fig. 2. In the following part of the paper, â€˜â€˜horizontalâ€™â€™ and
+â€˜â€˜Xâ€™â€™ indicate the same axis, where the former is mainly
 used to describe the spatial relationship and the latter
 mainly for the data component. The same distinction is
-used for eeverticalff and eeY.ff
+used for â€˜â€˜verticalâ€™â€™ and â€˜â€˜Y.â€™â€™
 3.2. Variation of Articulation and Acoustics
 Because of coarticulation, both the left and right
 phonemes affect movements of the articulators. For this
@@ -440,7 +440,7 @@ terms in a stepwise fashion until all the remaining terms are
 statistically significant. The probability of the rejection
 region F > F was set PdF > FT ? 0:001. The multiple
 correlation coefficients with the partial regression coefficients
-(PRC) reflect the eecontributionff of each factor to
+(PRC) reflect the â€˜â€˜contributionâ€™â€™ of each factor to
 the target. The PRCs of the formulas (1)?(4) are used to
 evaluate the effects of each factor on the CP of the central
 phoneme. Note that after using the Z-score the partial
@@ -486,7 +486,7 @@ effects of the perpendicular dimension of the same
 observation point. The dots indicate that the factors were
 removed in the stepwise regression since they were
 statistically less significant. The variables starting with
-eepff and eefff denote the components of the preceding and
+â€˜â€˜pâ€™â€™ and â€˜â€˜fâ€™â€™ denote the components of the preceding and
 the following phonemes, respectively, and the others show
 the components out of the same phoneme to account for
 physiological constraints inter and/or intra the articulators.
@@ -941,7 +941,7 @@ consonants, the X-positions are the dominant factor for
 movements of the tongue tip. The Y-movement of the
 tongue tip seems to be an independent motion superimposed
 on a continuous movement of the body (see Fig. 6
-for details). This observation supports ON hmanfs conclusion
+for details). This observation supports OÂ¨ hmanâ€™s conclusion
 that VCV articulation could be represented by a basic
 diphthongal gesture with an independent consonantal
 gesture superimposed on its transitional portion [3].
@@ -1054,40 +1054,40 @@ beneficial comments on this work.
 REFERENCES
 [1] D. Raymond, The Physiology of Speech and Hearing (Prentice-
 Hall, Englewood Cliffs, 1980).
-[2] L. Henke, eeDynamic articulatory model of speech production
-using computer simulation,ff Doctoral Dissertation, MIT,
+[2] L. Henke, â€˜â€˜Dynamic articulatory model of speech production
+using computer simulation,â€™â€™ Doctoral Dissertation, MIT,
 (1966).
-[3] S. ON hman, eeCoarticulation in VCV utterances: Spectrographic
-measurements,ff J. Acoust. Soc. Am., 39, 151?168 (1966).
-[4] S. Kiritani, eePerturbation of the consonant and vowel
-articulation by a adjacent segments,ff J. Acoust. Soc. Jpn. (J),
+[3] S. OÂ¨ hman, â€˜â€˜Coarticulation in VCV utterances: Spectrographic
+measurements,â€™â€™ J. Acoust. Soc. Am., 39, 151?168 (1966).
+[4] S. Kiritani, â€˜â€˜Perturbation of the consonant and vowel
+articulation by a adjacent segments,â€™â€™ J. Acoust. Soc. Jpn. (J),
 34, 132?139 (1978).
-[5] D. Recasens, M. Pallares and J. Fontdevila, eeA model of
-lingual coarticulation based on articulatory constraints,ff
+[5] D. Recasens, M. Pallares and J. Fontdevila, â€˜â€˜A model of
+lingual coarticulation based on articulatory constraints,â€™â€™
 J. Acoust. Soc. Am., 102, 544?561 (1997).
-[6] K. Shirai and M. Honda, eeEstimation of articulatory parameters
-from speech sound,ff Trans. IECE, 61, 409?416 (1978).
-[7] S. Maeda, eeCompensatory articulation during speech: evidence
+[6] K. Shirai and M. Honda, â€˜â€˜Estimation of articulatory parameters
+from speech sound,â€™â€™ Trans. IECE, 61, 409?416 (1978).
+[7] S. Maeda, â€˜â€˜Compensatory articulation during speech: evidence
 from the analysis of vocal tract shapes using an articulatory
-model,ff in Speech Production and Speech Modelling, W. J.
+model,â€™â€™ in Speech Production and Speech Modelling, W. J.
 Hardcastle and A. Marchal, Eds. (Kluwer Academic Publishers,
 Dordrecht, 1990), pp. 131?149.
-[8] J. Dang and K. Honda, eeA physiological model of a dynamic
-vocal tract for speech production,ff Acoust. Sci. & Tech., 22,
+[8] J. Dang and K. Honda, â€˜â€˜A physiological model of a dynamic
+vocal tract for speech production,â€™â€™ Acoust. Sci. & Tech., 22,
 415?425 (2001).
-[9] J. Dang and K. Honda, ee Estimation of vocal tract shape from
-sounds via a physiological articulatory model,ff J. Phonet., 30,
+[9] J. Dang and K. Honda, â€˜â€˜ Estimation of vocal tract shape from
+sounds via a physiological articulatory model,â€™â€™ J. Phonet., 30,
 511?532 (2002).
-[10] J. Dang and K. Honda, eeConstruction and control of a
-physiological articulatory model,ff J. Acoust. Soc. Am., 115,
+[10] J. Dang and K. Honda, â€˜â€˜Construction and control of a
+physiological articulatory model,â€™â€™ J. Acoust. Soc. Am., 115,
 853?870 (2004).
-[11] T. Okadome and M. Honda, eeGeneration of articulatory
-movements by using a kinematic triphone model,ff J. Acoust.
+[11] T. Okadome and M. Honda, â€˜â€˜Generation of articulatory
+movements by using a kinematic triphone model,â€™â€™ J. Acoust.
 Soc. Am., 110, 453?463 (2001).
 [12] K. Stevens, Acoustic Phonetics (MIT Press, Cambridge, Mass.,
 2000).
-[13] K. Moll and R. Daniloff, eeInvestigation of timing of velar
-movement during speech,ff J. Acoust. Soc. Am., 50, 678?684
+[13] K. Moll and R. Daniloff, â€˜â€˜Investigation of timing of velar
+movement during speech,â€™â€™ J. Acoust. Soc. Am., 50, 678?684
 (1971).
 [14] N. Draper and H. Smith, Applied Regression Analysis, 2nd Ed.
 (John Wiley & Sons, New York, 1981), pp. 307?312.
