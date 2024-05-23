@@ -2,6 +2,7 @@ import os
 import dataset
 import unittest
 import datetime
+import pathlib
 from typing import Literal
 
 
@@ -71,7 +72,10 @@ class SearcherResult:
         date = "{:04}{:02}{:02}".format(date.year, date.month, date.day)
         time = datetime.datetime.today().time()
         time = "{:02}{:02}".format(time.hour, time.minute)
-        path = "{:03}-{}-{}-{}".format(self.number, date, time, self.body)
+        filename = "{:03}-{}-{}-{}".format(self.number, date, time, self.body)
+        path = pathlib.Path(path)
+        path.mkdir()
+        path = path / filename
         with open(path, mode="w+") as f:
             for element in self.result:
                 f.write("left: ")
