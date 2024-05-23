@@ -97,9 +97,9 @@ class Searcher:
     A class which provide a operation on specified dataset.
     """
 
-    def __init__(self, database: str | os.PathLike):
+    def __init__(self, manager: dataset.DatasetManager):
         self.counter = 0
-        self.manager = dataset.DatasetManager(database)
+        self.manager = manager
 
     def __del__(self):
         del self.manager
