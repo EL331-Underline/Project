@@ -138,9 +138,8 @@ class TestSearcher(unittest.TestCase):
 
             m = dataset.DatasetManager(db.name)
             m.create(f1.name, None)
-            del m
 
-            s = Searcher(db.name)
+            s = Searcher(m)
             r = s.search(SearcherQuery("word token", "that"))
             assert len(r.result) == 1
             assert r.result[0].left == [
