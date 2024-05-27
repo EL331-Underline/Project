@@ -142,12 +142,12 @@ class TestSearcher(unittest.TestCase):
 
             s = Searcher(m)
             r = s.search(SearcherQuery("word token", "that"))
-            assert len(r.result) == 1
-            assert r.result[0].left == [
-                "this", "is", "the", "test", "sentence"]
-            assert r.result[0].target == ["that"]
-            assert r.result[0].right == [
-                "will", "be", "used", "at", "test"]
+            self.assertEqual(len(r.result), 1)
+            self.assertEqual(
+                r.result[0].left, ["this", "is", "the", "test", "sentence"])
+            self.assertEqual(r.result[0].target, ["that"])
+            self.assertEqual(
+                r.result[0].right, ["will", "be", "used", "at", "test"])
 
 
 if __name__ == "__main__":

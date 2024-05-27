@@ -134,12 +134,12 @@ class TestConsistency(unittest.TestCase):
             m.create(f2.name, "f2")
             c = Consistency(m)
             r = c.compare()
-            assert r.names == ["f1", "f2"]
-            assert r.words == ["b", "c", "d", "a", "e"]
+            self.assertEqual(r.names, ["f1", "f2"])
+            self.assertEqual(r.words, ["b", "c", "d", "a", "e"])
             for w in ["a", "b", "c", "d"]:
-                assert w in r.words_by_name["f1"]
+                self.assertIn(w, r.words_by_name["f1"])
             for w in ["b", "c", "d", "e"]:
-                assert w in r.words_by_name["f2"]
+                self.assertIn(w, r.words_by_name["f2"])
 
 
 if __name__ == "__main__":
