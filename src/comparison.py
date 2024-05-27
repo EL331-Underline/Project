@@ -59,12 +59,29 @@ class Comparison:
 
         return ComparisonResult(K_res,Q_res)
 
+class Testcomparison(unittest.TestCase):
+    def test_compmparison(self):
+        
 
-#m = DatasetManager("aaa")
-#m.create("../dataset/AnwarKhoirul_20.txt","K")
-#m.create("../dataset/AokiToshiaki_4.txt","Q")
+        with NamedTemporaryFile(suffix="db") as db, NamedTemporaryFile() as f1,NamedTemporaryFile() as f2:
+                with open(f1.name, "w+") as wf1:
+                    wf1.write(
+                        "bbb cccc")
+                
+                with open(f2.name, "w+") as wf1:
+                    wf1.write(
+                        "aaa aaa aaa aaa aaa")
+                m = DatasetManager(db.name)
+                m.create(f1.name,"K")
+                m.create(f2.name,"Q")
+                c = Comparison(m)
+                res = c.compare("K","Q")
+                res.show()
+                assert len(res.K_word) == 2
+                assert len(res.Q_word) == 1
 
-#c = Comparison(m)
-#c.compare("K","Q").show()
+if __name__ == "__main__":
+        unittest.main()
+ 
 
 
