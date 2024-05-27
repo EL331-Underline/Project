@@ -75,7 +75,8 @@ class SearcherResult:
         time = "{:02}{:02}".format(time.hour, time.minute)
         filename = "{:03}-{}-{}-{}".format(self.number, date, time, self.body)
         path = pathlib.Path(path)
-        path.mkdir()
+        if not path.is_dir():
+            path.mkdir()
         path = path / filename
         with open(path, mode="w+") as f:
             for element in self.result:
