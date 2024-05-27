@@ -43,7 +43,7 @@ class TestConnectDatabase(unittest.TestCase):
             """)
             names = res.fetchall()
             cur.close()
-            assert len(names) == 1
+            self.assertEqual(len(names), 1)
 
             # Check `connect_database` creates empty `files`
             cur = con.cursor()
@@ -52,7 +52,7 @@ class TestConnectDatabase(unittest.TestCase):
             """)
             files = res.fetchall()
             cur.close()
-            assert len(files) == 0
+            self.assertEqual(len(files), 0)
 
     def test_connect_database_with_non_empty_db(self):
         with NamedTemporaryFile(suffix="db") as db:
@@ -79,8 +79,8 @@ class TestConnectDatabase(unittest.TestCase):
             """)
             files = res.fetchall()
             cur.close()
-            assert len(files) == 1
-            assert ("test org", "test cur", "test path") in files
+            self.assertEqual(len(files), 1)
+            self.assertIn(("test org", "test cur", "test path"), files)
 
 
 class DatasetManager:
@@ -181,9 +181,9 @@ class TestDatasetManager(unittest.TestCase):
 
             f1_name = os.path.split(f1.name)[1]
             f2_name = "f2-alias"
-            assert len(files) == 2
-            assert (f1_name, f1_name, f1.name) in files
-            assert (f2_name, f2_name, f2.name) in files
+            self.assertEqual(len(files), 2)
+            self.assertIn((f1_name, f1_name, f1.name), files)
+            self.assertIn((f2_name, f2_name, f2.name), files)
 
     def test_retrieve(self):
         with NamedTemporaryFile(suffix="db") as db, NamedTemporaryFile() as f:
@@ -193,7 +193,7 @@ class TestDatasetManager(unittest.TestCase):
             with open(f.name, "w") as f:
                 f.write("test sentence")
             fetched = m.retrieve("file")
-            assert fetched == "test sentence", fetched
+            self.assertEqual(fetched, "test sentence")
 
     def test_retrieve_names(self):
         with NamedTemporaryFile(suffix="db") as db, \
@@ -203,9 +203,9 @@ class TestDatasetManager(unittest.TestCase):
             m.create(f1.name, "file1")
             m.create(f2.name, "file2")
             names = m.retrieve_names()
-            assert len(names) == 2
-            assert "file1" in names
-            assert "file2" in names
+            self.assertEqual(len(names), 2)
+            self.assertIn("file1", names)
+            self.assertIn("file2", names)
 
     def test_update(self):
         with NamedTemporaryFile(suffix="db") as db, NamedTemporaryFile() as f1:
@@ -220,8 +220,8 @@ class TestDatasetManager(unittest.TestCase):
             """)
             names = res.fetchall()
             cur.close()
-            assert len(names) == 1
-            assert ("file1", "new file1") in names
+            self.assertEqual(len(names), 1)
+            self.assertIn(("file1", "new file1"), names)
 
     def test_delete(self):
         with NamedTemporaryFile(suffix="db") as db, NamedTemporaryFile() as f1:
@@ -234,8 +234,8 @@ class TestDatasetManager(unittest.TestCase):
             """)
             files = res.fetchall()
             cur.close()
-            assert len(files) == 1
-            assert ("file1", "file1", f1.name) in files
+            self.assertEqual(len(files), 1)
+            self.assertIn(("file1", "file1", f1.name), files)
 
             m.delete("file1")
 
@@ -245,7 +245,7 @@ class TestDatasetManager(unittest.TestCase):
             """)
             files = res.fetchall()
             cur.close()
-            assert len(files) == 0
+            self.assertEqual(len(files), 0)
 
 
 if __name__ == "__main__":
