@@ -113,7 +113,17 @@ def consistency_body(m: DatasetManager):
             if len(cmd) != 1:
                 print("invalid number of arguments")
                 continue
-            s.compare().show()
+            r = s.compare()
+            r.show()
+            while True:
+                yn = input("(consistency) save result? (y/n): ")
+                if yn == "y":
+                    r.save(".")
+                    break
+                elif yn == "n":
+                    break
+                else:
+                    print("entry y or n")
         elif cmd[0] == "exit":
             return
         else:
