@@ -1,7 +1,16 @@
 import sqlite3
 import os
 import unittest
+import unicodedata
 from tempfile import NamedTemporaryFile
+
+
+def is_printable(c: str) -> bool:
+    return unicodedata.category(c)[0] != "C"
+
+
+def to_printable(s: str) -> str:
+    return "".join(filter(is_printable, s))
 
 
 def connect_database(database: str | os.PathLike) -> sqlite3.Connection:
@@ -125,7 +134,7 @@ class DatasetManager:
         cur.close()
 
         with open(path[0]) as f:
-            return f.read()
+            return to_printable(f.read())
 
     def retrieve_names(self) -> list[str]:
         """
