@@ -87,7 +87,7 @@ def searcher_body(m: Searcher):
                 print("invalid number of arguments")
                 continue
             r = s.search(SearcherQuery(cmd[1], cmd[2]))
-            r.colorize()
+            r.show()
             while True:
                 yn = input("(searcher) save result? (y/n): ")
                 if yn == "y":
