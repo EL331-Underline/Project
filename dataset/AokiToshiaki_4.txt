@@ -180,7 +180,7 @@ St is a regular expression which corresponds to a sequence
 x. For example, x = a.b. c for x = a ? b - c. Ep is a set
 of all symbols which appear on expression P. P i is defined
 as the ith sequence of P. For example, P1 = P, P2 = P.P
-and P3 = P.P.P, .... P° is defined as f for any P.
+and P3 = P.P.P, .... P is defined as f for any P.
 w/E means a restriction of w over E. For instance, a ? c -
 a?d?a?b/{a,c}=a-c-a?a
 The operator [S] is different from that of original CREs.
@@ -603,7 +603,7 @@ G (Un=0a i.(Uj=0(X[] bj.Y)))+
 (P-(X][Q .Y)+) (Q.(P.X[]Y))
 Theorem 5.2
 (P. [ ]Cr) t (P + Q)*
-ifP=U°=0 al, Q=Um=0bi and EP(lEq =
+ifP=U=0 al, Q=Um=0bi and EP(lEq =
 P*[ ]Li 4 (f + P.P*)[](E + Q.Q*)
 By the distributivea xiom,
 G E+ P.P* + Q.Q*+ (P.P*[]4.Q*)...(1)
@@ -826,111 +826,4 @@ from the analysis model of the driver and we extracted a set
 of threads from the design model and implemented them
 using C language.
 As a future work, we are planning to apply our approach
-to larger and more complex systems. For the development
-of such systems, the transformation steps become
-extremely large. We will implement a system to help the
-transformation.
-References
-[1] Vijay K. Garg, M.T. Ragunath: Concurrent regular
-expressions and their relationship to Petri nets, Theoretical
-Computer Science 96, pp.285-304, 1992.
-[2] Toshiaki Aoki and Takuya Katayama: SES Model for
-Object-Oriented Time Critical System Development,
-Proceedings of the IEEE International Conference
-on Artificial Intelligence and Computational Intelligence
-for Decision, Control, and Automation in Engineering
-and Industrial Applications ACIDCA'2000,
-pp.19-24, 2000.
-[3] Toshiaki Aoki and Takuya Katayama: SES Model
-for Object-Oriented Embedded System Development,
-Japan Society for Software Science and Technology,
-FOSE'2000 Foundations of Software Engineering
-VII, pp.157-164, 2000.
-[4] Toshiaki Aoki, Akira Kawaguchi, Tomoji Kishi and
-Takuya Katayama: Synchronized Execution Sequence
-Based Software Architecture for Object-Oriented Embedded
-Systems, First Working IFIP Conference on
-Software Architecture WICSA1, 1999.
-[5] Arto Salomma : Two Complete Axiom Systems for
-the Algebra of Regular Events , Journal of the Association
-for Computing Machinery, Vol.13, No. 1,
-pp 158-169, 1966.
-[6] C.A.R. Hoare: Communicating Sequential Process,
-Prentice-Hall, Inc., Englewood Cliffs, New Jersey
-1985.
-[7] Robin Milner : Communication and Concurrency,
-Prentice Hall, 1989
-[8] J.C.M. Baeten: Applications of Process Algebra,
-Cambridge Tracts in Theoretical Computer Science
-17, Cambridge University Press, 1990.
-[9] Maher Awad, Juha Kuusela and Jurgen Ziegler :
-Object-Oriented Technology for Real-Time Systems ,
-Prentice Hall, 1996.
-[ 10] J.Rumbaugh, M.Blaha, W.Premerlani, F.Eddy,
-W.Lorenson: Object-Oriented Modeling and Design,
-Prentice Hall, 1991.
-Appendix: A part of implementation
-/* Clock Frequency (Hz) */
-#define INPUT_CLOCK 50000
-#define CH_MAX 3
-static int f[CH _MAX], v[CH_MAX];
-static short *start adr[CH MAX];
-static short *current _adr[CH_MAX];
-static short *end _adr[CH_MAX];
-static double counter[CH _MAX];
-static double counterstep[CH_MAX];
-static int playflag[CH _MAX];
-static SEMAFO sem=0;
-/* play.(p_O+p_l+p_2) */
-void PLAY(int ch, short *start, short *end){
-ENTER(sem);
-playflag[ch] = 1;
-start _adr [ch] = start;
-end _adr[ch] = end;
-LEAVE(sem);
-}
-/* stop.(s_0+sl+s_2) */
-void STOP (int ch) {
-ENTER(sem);
-playflag[ch] = 0;
-LEAVE(sem);
-}
-/* freq. (f _0+fl+f2) */
-void FREQ(int ch, int value){
-ENTER(sem);
-f[ch] = value;
-counter[ch] = 0.0;
-counter _step[ch] = f[ch]/INPUT_CLOCK;
-LEAVE(sem);
-}
-/* vol. (v O+v l+v 2) */
-void VOL(int ch, int value){
-ENTER(sem);
-v[ch] = value;
-LEAVE(sem);
-}
-/* clock.calc.write */
-void CLK ( ) {
-short mix = 0;
-int i;
-for (i=0; i<3; i++)
-{
-if (playflag[i] )
-{
-/* calcurate the address counter */
-counter[i] += counter _step[i];
-if(counter[i]>=1.0)
-{
-counter[i]-=1.0;
-current _adr[i]++;
-}
-/*c heck the end of data */
-if(current _adr[i]==endadr[i])
-playf lag [ i ] = 0;
-mix += (*(current adr[i]) * v[i]) >> 4;
-}
-}
-/* I/O Access */
-DAC WRITE(mix);
-}
-10
+to larger and more complex systems. For
