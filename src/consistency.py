@@ -1,5 +1,9 @@
 import unittest
 import dataset
+import os
+import datetime
+import pathlib
+import sys
 from io import StringIO
 from typing import Set, Dict, List
 from dataset import DatasetManager
@@ -59,18 +63,18 @@ class Table:
 
 class ConsistencyResult:
     def __init__(
-        self, words: List[str], names: List[str],
+        self, number: int, words: List[str], names: List[str],
         words_by_name: Dict[str, Set[str]]
     ):
         """
         `words` and `names` must be sorted by correct way.
         """
-
+        self.number = number
         self.words = words
         self.names = names
         self.words_by_name = words_by_name
 
-    def show(self):
+    def show(self, output=sys.stdout):
         word_max_len = 0
         for word in self.words:
             word_max_len = max(word_max_len, len(word))
@@ -85,11 +89,26 @@ class ConsistencyResult:
                 else:
                     column.append("x")
             table.add_column(name, column)
-        print(table.to_string())
+        print(table.to_string(), file=output)
+
+    def save(self, path: str | os.PathLike):
+        date = datetime.datetime.today().date()
+        date = "{:04}{:02}{:02}".format(date.year, date.month, date.day)
+        time = datetime.datetime.today().time()
+        time = "{:02}{:02}".format(time.hour, time.minute)
+        filename = "{:03}-{}-{}-consistency".format(
+            self.number, date, time)
+        path = pathlib.Path(path)
+        if not path.is_dir():
+            path.mkdir()
+        path = path / filename
+        with open(path, mode="w+") as f:
+            self.show(f)
 
 
 class Consistency:
     def __init__(self, manager: DatasetManager):
+        self.counter = 0
         self.manager = manager
 
     def compare(self) -> ConsistencyResult:
@@ -116,7 +135,9 @@ class Consistency:
             for word in sorted(words_by_rank[rank]):
                 ordered_words.append(word)
 
-        return ConsistencyResult(ordered_words, names, words_by_name)
+        number = self.counter
+        self.counter += 1
+        return ConsistencyResult(number, ordered_words, names, words_by_name)
 
 
 class TestConsistency(unittest.TestCase):
