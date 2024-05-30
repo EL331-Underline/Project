@@ -3,6 +3,7 @@ import dataset
 import unittest
 import datetime
 import pathlib
+import sys
 from tempfile import NamedTemporaryFile
 from typing import Literal
 
@@ -52,21 +53,24 @@ class SearcherResult:
         self.body = body
         self.result = result
 
-    def colorize(self):
+    def show(self, output=sys.stdout):
         left_len = 0
         for element in self.result:
             left_len = max(left_len, element.left_visual_len())
         for element in self.result:
-            print(" " * (left_len - element.left_visual_len()), end="")
+            spaces = " " * (left_len - element.left_visual_len())
+            print(spaces, end="", file=output)
             for s in element.left:
-                print(s + " ", end="")
-            print("\033[31m", end="")
+                print(s + " ", end="", file=output)
+            if os.isatty(output.fileno()):
+                print("\033[31m", end="", file=output)
             for s in element.target:
-                print(s + " ", end="")
-            print("\033[0m", end="")
+                print(s + " ", end="", file=output)
+            if os.isatty(output.fileno()):
+                print("\033[0m", end="", file=output)
             for s in element.right:
-                print(s + " ", end="")
-            print()
+                print(s + " ", end="", file=output)
+            print(file=output)
 
     def save(self, path: str | os.PathLike):
         date = datetime.datetime.today().date()
@@ -79,19 +83,7 @@ class SearcherResult:
             path.mkdir()
         path = path / filename
         with open(path, mode="w+") as f:
-            for element in self.result:
-                f.write("left: ")
-                for s in element.left:
-                    f.write(s + " ")
-                f.write("\n")
-                f.write("target: ")
-                for s in element.target:
-                    f.write(s + " ")
-                f.write("\n")
-                f.write("right: ")
-                for s in element.right:
-                    f.write(s + " ")
-                f.write("\n")
+            self.show(f)
 
 
 class Searcher:
