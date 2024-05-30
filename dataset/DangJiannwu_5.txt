@@ -12,7 +12,7 @@ hard palate by adjusting the location of vowel articulation points. To evaluate 
 right phonemes on the target phoneme, three-phoneme sequences, consisting of five Japanese vowels
 (V) and ten apical and two palatal consonants (C), were extracted from read sentences and used in this
 analysis. A stepwise multiple regression method was used to analyze the phoneme sequences, in order
-to evaluate the ‘‘contributions’’ of the surrounding phonemes to the central one. The results showed
+to evaluate the eecontributionsff of the surrounding phonemes to the central one. The results showed
 that the horizontal component of the articulatory movement had a dominant function during
 articulation. The movement of the tongue tip was highly correlated to the tongue dorsum movement in
 the horizontal dimension, but was almost independent in the vertical dimension. This phenomenon
@@ -44,7 +44,7 @@ lips move from the preceding phoneme toward the
 following one. In this case, the target of this phoneme is
 reached in different ways, depending on the status of the
 previous phoneme. Anticipatory (RL) coarticulation can
-occur only if the speaker can ‘‘look ahead’’ in time and
+occur only if the speaker can eelook aheadff in time and
 anticipate oncoming sounds. While LR coarticulation
 occurs at the physiological level, RL coarticulation reflects
 a high-level (central) type of phonological-phonetic processing,
@@ -54,7 +54,7 @@ phonemic-segment model [2]. Each segment with multiple
 phonemes was described in a matrix of articulatory target
 features, in which some features change abruptly as the
 targets vary from one to another.
-O¨
+ON
 hman investigated coarticulation in VCV utterances
 using spectrographical measurements, in which three stop
 e-mail: jdang@jaist.ac.jp
@@ -236,20 +236,20 @@ almost horizontally for one of the speakers. In that
 situation, it was difficult to obtain a reliable correlation
 of the vertical and horizontal directions. In contrast, the
 proposed articulatory coordinate provides a proper reference
-for calibrating the speakers’ head during the EMA
+for calibrating the speakersf head during the EMA
 Fig. 3 Distribution of the CP (T3) of five Japanese vowels from one speaker. The left panels show the location of the CPs
-in the articulatory space (dimensions in cm); the right panels show the relative frequency of the CP’s appearance in each
+in the articulatory space (dimensions in cm); the right panels show the relative frequency of the CPfs appearance in each
 location (section number).
 J. DANG et al.: COARTICULATION IN CONTINUOUS SPEECH
 321
 experiments. The calibration using the proposed coordinate
 derives a maximum projection on the horizontal axis for
 both the vocalic and consonantal movements, as shown in
-Fig. 2. In the following part of the paper, ‘‘horizontal’’ and
-‘‘X’’ indicate the same axis, where the former is mainly
+Fig. 2. In the following part of the paper, eehorizontalff and
+eeXff indicate the same axis, where the former is mainly
 used to describe the spatial relationship and the latter
 mainly for the data component. The same distinction is
-used for ‘‘vertical’’ and ‘‘Y.’’
+used for eeverticalff and eeY.ff
 3.2. Variation of Articulation and Acoustics
 Because of coarticulation, both the left and right
 phonemes affect movements of the articulators. For this
@@ -440,7 +440,7 @@ terms in a stepwise fashion until all the remaining terms are
 statistically significant. The probability of the rejection
 region F > F was set PdF > FT ? 0:001. The multiple
 correlation coefficients with the partial regression coefficients
-(PRC) reflect the ‘‘contribution’’ of each factor to
+(PRC) reflect the eecontributionff of each factor to
 the target. The PRCs of the formulas (1)?(4) are used to
 evaluate the effects of each factor on the CP of the central
 phoneme. Note that after using the Z-score the partial
@@ -486,7 +486,7 @@ effects of the perpendicular dimension of the same
 observation point. The dots indicate that the factors were
 removed in the stepwise regression since they were
 statistically less significant. The variables starting with
-‘‘p’’ and ‘‘f’’ denote the components of the preceding and
+eepff and eefff denote the components of the preceding and
 the following phonemes, respectively, and the others show
 the components out of the same phoneme to account for
 physiological constraints inter and/or intra the articulators.
@@ -664,432 +664,4 @@ following phonemes on the central phoneme using the
 three-phoneme sequences.
 5.1. Method of Evaluation
 The basic idea for the evaluation is to quantify the
-effects of the lateral phonemes of the three-phoneme
-sequences on the central phoneme, and then make a
-comparison between the relative effects of the two sides.
-To do this, we fix a selected phoneme on a given side of the
-three-phoneme sequences and change the phonemes on the
-opposite side, so that variations in the tongue shape would
-be observed. The variation reflects the effects of the side
-with varying phonemes. In the same way, we can measure
-the effects of the other side by switching the sides and
-fixing the same selected phoneme. The standard deviation
-(STD) is used to evaluate variations in the tongue shape
-resulting from this manipulation. For a given phoneme
-sequence C1VC2, for example, we fix C2 and then replace
-C1 by all possible consonants in the observation data one
-by one. This replacement induces some variations in the
-tongue shapes of the central vowel. The STD of the tongue
-shapes from the average shape corresponds to effects of C1.
-The STD value resulted from C1 is referred to as Std1.
-Similarly, fixing C1 and replacing C2 by all the possible
-consonants, we can obtain another STD for tongue shape
-changes, named Std2. If Std1 is larger than Std2, it means
-the preceding phoneme has greater effect than the following
-one, and vice versa. Note that in this processing, all
-four points on the tongue surface were used to describe
-tongue shape, regardless of the definition of the CP. The
-fixed phoneme was included from the varying phonemes in
-the palatal-vowel-palatal sequence to increase data size,
-while it was excluded in the other sequences.
-5.2. LR Effect vs RL Effect
-Table 1 shows the STD of tongue shapes during CVC
-sequences, where the palatal and apical consonants were
-treated as two separate groups. For a sequence of C1VC2,
-Std1 is the value obtained by fixing C2 and altering C1, and
-Std2 is the value obtained by the opposite order. The dark
-shadow indicates that such combinations do not exist
-symmetrically. The pale shadow denotes the case in which
-the following phonemes have larger effects than the
-preceding ones. The part without any shadow is for the
-case in which the preceding phonemes have greater effects
-than the following ones. In the results, the preceding
-consonants show larger effects on the vowel /a/ while the
-following ones have larger effects on /o/. For the other
-vowels, there is no significant superiority shown between
-the vowel positions.
-For the selected sequences, the number of combinations
-beginning with a given phoneme may be different from that
-Fig. 8 PRCs for palatal target T3x (upper) and T3y
-(lower) in vowel-palatal-vowel sequences. Dots denote
-the removal of variables without statistical significance.
-Acoust. Sci. & Tech. 25, 5 (2004)
-326
-of combinations terminated by the same phoneme. To
-reduce some potential influences caused by the asymmetry
-of the data, an identical number was chosen from the two
-combinations in calculating the average value. The last two
-rows, indicated by , show the average values over all the
-vowels. The apical consonants show that the preceding
-phonemes clearly tend to have larger effects on the vowels
-than the following ones. For the palatal consonants, shown
-in the last two columns, the following phonemes show
-greater effects than the preceding ones. The two consonant
-groups, meanwhile, show a different tendency to one
-another.
-Table 2 shows the STD (Std1 and Std2) of tongue
-shapes during VCV sequences, where C denotes the apical
-consonants. The shading has the same meaning as in
-Table 1. In most cases, for individual consonants, the
-preceding phoneme has a slightly greater effect than the
-following one. For the average values, however, there is no
-clear tendency corresponding to the vowels; both the
-preceding and following vowels show about the same
-magnitude of effect on the central apicals.
-Table 3 shows the results for VCV with the palatal
-consonants. For most combinations, the following vowel
-has a greater effect on the consonant than the preceding
-one. On average, for vowels /i/, /u/, and /e/, the
-following vowel shows stronger effects on the palatals
-than the preceding one, while for /a/ and /o/ the preceding
-vowel shows larger effects. The opposite tendencies seem
-to be attributed to closed vowels and open vowels. As
-shown in Fig. 3, the CP is relatively loose (scattering more
-widely) for the open vowels of /a/ and /o/, and is strict for
-the closed vowels. The articulation points for both the
-vowels and the palatals are on the dorsum, and they affect
-each other during articulation. It can be expected that the
-phonemes (vowels and consonants) with a strict CP have
-stronger effects on the others.
-6. DISCUSSION AND CONCLUSION
-In this study, we investigated coarticulation within
-three-phoneme sequences from Japanese read sentences,
-where pauses and phrase boundaries were excluded. Our
-analysis focused on the effects of coarticulations on
-phoneme targets. For this purpose, each phoneme was
-represented using three observation points in the stationary
-period: the lower jaw, tongue tip, and tongue dorsum. In
-continuous speech, distribution of the average crucial
-points for both vowels (the tongue dorsum) and the apical
-consonants (the tongue tip) was nearly linear. These two
-distribution lines constructed an articulatory coordinate for
-vowels and consonants, which was consistent for all three
-speakers. Since the distribution of the apical CPs depends
-heavily on the palate shape, the main direction of the
-distribution is speaker-dependent. To construct a constant
-Table 2 The STD (cm) of tongue shape variations for
-V1CV2, where C is the apical consonant; Std1 is the
-value obtained by fixing V2 and replacing V1 using all
-the vowels, and Std2 is the value for the opposite order.
- indicates the average values over the consonants.
-a i U e o
-Std1 0.117
-t
-Std2 0.107 0.064 0.125
-d Std1 0.134 0.127
-Std2 0.140
-0.106
-0.105
-0.076
-0.069
-0.109
-0.110
-0.070
-0.059
-0.118 0.089 0.138
-s Std1 0.098 0.078
-Std2 0.105 0.066 0.066
-z Std1 0.140 0.086
-Std2 0.101 0.060 0.047 0.093
-sh Std1 0.078
-Std2 0.068 0.100 0.077
-0.075
-0.065
-0.084
-0.070
-0.082
-0.105 0.056
-Ts Std1
-Std2 0.063 0.097
-0.074
-0.059 0.070
-ch Std1
-Std2 0.081 0.071
-0.068
-0.041 0.074
-j Std1
-Std2 0.073 0.057 0.063 0.058 0.068
-Std1 0.090 0.063 0.095 0.107
-* Std2 0.090 0.066 0.085 0.103
-0.099
-0.140
-0.088
-0.129
-Table 3 The STD (cm) of tongue shape variations for
-V1CV2, where C is the palatal consonant. The rest is
-the same as that in Table 2.
-a i U e o
-Std1 0.299 0.158 0.137 0.204
-k Std2 0.288 0.179 0.192 0.236
-Std1 0.313 0.149 0.162 0.209
-g Std2 0.292 0.237 0.161
-0.147
-0.184
-0.215
-Std1 0.304 0.153 0.322
-* Std2 0.289 0.214 0.242
-0.320
-0.265
-0.322
-0.214
-0.206
-0.228
-Table 1 The STD (cm) of tongue shape variations for
-C1VC2. Std1 is the value obtained by fixing C2 and
-replacing C1 by all the consonants, and Std2 is the
-value obtained in the opposite order.  denotes the
-average values over all the vowels. Note that the
-calculation was carried out for the palatal and apical
-consonants separately.
-t d s z sh Ts ch J k g
-Std1 0.162 0.186
-0.129
-0.106 0.108 0.108 0.102 0.106 0.118 0.095
-a
-Std2 0.135 0.064 0.119 0.097
-Std1 0.158 0.076 0.198 0.084
-0.100
-0.095
-0.151 0.103 0.062 0.070 0.025 0.058
-i
-Std2 0.157 0.076 0.091 0.025 0.058
-Std1 0.108 0.096 0.061 0.139 0.053 0.029 0.107 0.099
-u
-Std2 0.112 0.128 0.099
-Std1 0.040 0.065 0.077 0.077 0.059 0.212
-e
-Std2 0.070
-0.170
-0.168
-0.092 0.056 0.067 0.212
-Std1 0.191 0.170 0.203 0.126 0.145 0.136 0.130
-o
-Std2 0.236
-0.229 0.213 0.166
-0.187 0.199 0.134
-0.122
-0.084
-0.211 0.151 0.110
-* Std1 0.226 0.130 0.212 0.167 0.136 0.128
-Std2 0.199 0.098 0.072 0.084 0.140 0.134
-J. DANG et al.: COARTICULATION IN CONTINUOUS SPEECH
-327
-angle between the vocalic and consonantal distributions, it
-seems that the speakers adjust the movement directions of
-the dorsum while producing vowels to fit the consonant
-distribution. This implies that the speakers might compensate
-for the morphological difference of the hard palate by
-adjusting the main moving direction of the tongue for the
-vowels.
-6.1. Coarticulation and Context
-Four combinations of three-phoneme sequences were
-used in this study, which consist of vowels, apical
-consonants, and palatal consonants. The CP of the central
-phoneme was represented by a linear function of the
-observation vectors with 17 elements. A stepwise multiple
-regression method was adopted to focus the analysis on the
-factors with statistical significance. For this linear description,
-multiple correlations were about 0.99 for the Xdimension
-and 0.92 for the Y-dimension, and the prediction
-errors were about 0.07 cm for the X-dimension and about
-0.1 cm for the Y-dimension. Because of the high correlations
-and small prediction errors, we can expect this
-analysis to give reliable results.
-The X-component of the independent variables showed
-dominant contributions to both X- and Y-components of the
-CP of the central phoneme in all the combinations. This
-result suggests that Japanese speakers may control tongue
-movement more actively in the horizontal dimension than
-that in the vertical dimension. Our model simulation
-confirmed this suggestion to some extent, in which for a
-given force the tongue muscles generated a larger movement
-for the tongue dorsum in the horizontal dimension
-than that in the vertical dimension [10].
-Using the above result, we may explain the opposite
-behaviors of the preceding and following phonemes in
-CVC sequence. There, the preceding phoneme had larger
-PRCs in the X-dimension than the following one, whereas
-the following phoneme showed larger PRCs in the Ydimension
-than the preceding one. The former phenomenon
-may be related to the basic CV structure of Japanese, in
-which the vowel has a closer relationship with the
-preceding phoneme than the following one. The latter
-phenomenon may be explained as a passive component of
-movement if Japanese speakers truly control movements in
-the X-dimension more actively as mentioned above. In
-other words, the Y-movement of the dorsum behaves as a
-relaxation motion (carryover effects), which depends on
-the past deformation. Thus, it is reasonable to state that the
-movement for the right phoneme in the Y-dimension
-depends more on the central vowel. Similar tendency can
-be seen in palatal-vowel combinations.
-In V-apical-V sequences, T1x of both preceding and
-following vowels contributes positively to apical T1x while
-the T3x of both the vowels contributes negatively. The
-positive contribution results from a synergic action of the
-surrounding vowels for forming the apical targets of the
-consonants. The negative contribution implies that the
-dorsum moves in the opposite directions during the vocalic
-gesture and consonantal gesture. The opposite motions in
-X-dimension during the apical consonants stretch the
-tongue surface to make it flat. This result is consistent
-with the articulatory observation.
-The tongue tip and the dorsum have a high correlation
-in the X-direction but they almost have no correlation in the
-Y-direction. According to the results from VCV with apical
-consonants, the X-positions are the dominant factor for
-movements of the tongue tip. The Y-movement of the
-tongue tip seems to be an independent motion superimposed
-on a continuous movement of the body (see Fig. 6
-for details). This observation supports O¨ hman’s conclusion
-that VCV articulation could be represented by a basic
-diphthongal gesture with an independent consonantal
-gesture superimposed on its transitional portion [3].
-The majority of the combinations showed the dorsum
-moves more consistently with the jaw in the X-direction
-than in the Y-direction. This is somewhat different from the
-conventional wisdom, and might imply that the translation
-movement of the jaw may positively contribute to tongue
-movement during speech. In the combination of V-palatal-
-V, however, the jaw shows a clear contribution to T3y
-during the palatal consonants, and the jaw and tongue tip
-work together to synergize the movement of the dorsum in
-the Y-dimension. It might suggest that there is a special
-requirement for the jaw to generate a synergic movement in
-forming the palatal-dorsal closure.
-6.2. LR Effect and RL Effects
-We used the standard deviation of the tongue shape of
-the central phoneme to evaluate the relative effects from
-the phonemes on the left and right sides. The deviation was
-measured by fixing one phoneme on a given side and
-varying the phonemes on the other side. The results showed
-that in apical-V-apical (CVC) sequences the preceding
-consonant affected the vowel more strongly than the
-following one. This result is the same as the one obtained
-by the regression analysis, and is also consistent with the
-one observed in [4]. Unlike CVC, in V-apical-V sequences,
-the effects of the preceding and the following vowels on
-the central consonant did not show any significant positional
-difference. This observation was not consistent with that
-in [4].
-In [5], Recasens et al. investigated the LR and RL
-effects by examining the transition between the consonant
-and vowel when fixing a phoneme at one end. They found
-that some coarticulations were vowel-dependent and others
-were consonant-dependent. The dependences were concerned
-with the degree of articulation constraint (DAC),
-Acoust. Sci. & Tech. 25, 5 (2004)
-328
-where the DAC scale ranks phonetic sound categories from
-maximally to minimally constrained as follows: /S/, /a/,
-/i/, /k/, dark /l/, (/s/) (DAC = 3) > /n/, /a/, (/s/)
-(DAC = 2) > /p/, /@/ (DAC = 1) [5]. Referring to the
-DAC, the apical consonants in general have a larger effect
-on vowels at the crucial point because the consonants have
-stricter constraints than vowels. This may be the reason
-why vowels do not show any significant positional difference
-on the apicals.
-For vowel-palatal combinations, clear tendencies were
-shown in both CVC and VCV. For CVC sequences, the
-following palatal generally showed larger effects on the
-vowels. For VCV, the preceding vowel showed a greater
-effect than the following one when fixing open vowels,
-while the opposite tendency was shown when fixing closed
-vowels. How should we explain this phenomenon? Here,
-we suppose that the look-ahead mechanism works on the
-vowel sequence over the palatal consonant as observed in
-[2], and the DAC plays an important role in coarticulation
-[5]. Accordingly, the CP of the right vowel affects that of
-the left vowels, and the extent of the effects depends on the
-DAC of the vowels. When fixing /i/ on the right side, for
-example, the replaceable vowels on the left side are
-/a,u,e,o/. According to the look-ahead mechanism, the CP
-of the left vowels approaches that of /i/ to some extent, so
-that the difference between the left and right vowels gets
-smaller. If fixing /i/ on the left side, in contrast, the CP of
-/i/ does not approach the CP of /a,u,e,o/ so much because
-/i/ has a higher DAC, and thus the difference between the
-left and right vowels is larger than in the former case.
-Therefore, the combination of /a,u,e,o/-palatal-/i/ has a
-smaller STD than /i/-palatal-/a,u,e,o/. When fixing /a/,
-the replaceable vowels are /i,u,e,o/, whose DACs are
-higher than or the same as that of /a/. The CP of /a/
-approaches the CP of /i,u,e,o/ if /a/ is fixed on the left side
-so that the difference between the left and right vowels
-becomes smaller. If /a/ is on the right side, the difference
-is not reduced since /a/ cannot strongly affect /i,u,e,o/.
-As a result, /a/-palatal-/i,u,e,o/ has a smaller STD than
-/i,u,e,o/-palatal-/a/. From the above, one can see that all
-the results of the vowel-palatal combinations can be
-explained using the look-ahead mechanism and the DAC.
-It has been observed that the articulation point for the
-palatal consonants is easily affected by vowels (cf. [12]).
-This analysis for vowel-palatal combinations showed a
-consistent result with the observation. The results for the
-vowel-palatal combination can be explained by using the
-look-ahead mechanism. However, the results from the
-apical-V-apical sequences showed that the preceding
-consonant had greater effects than the following one. A
-possible reason for this difference is that in vowel-apical
-combinations the CPs switch between the tongue tip and
-the dorsum, but the CPs in vowel-palatal combination are
-always located in the same place, the dorsum. In vowelapical
-combinations, the targets for the tongue tip and
-dorsum can overlap temporally, and/or reach optimal
-positions for both targets by a deformation of the tongue,
-for example, a stretch of the tongue surface. In this case,
-effects of carryover are also playing an important role. In
-contrast, in vowel-palatal combinations, the CP for the
-palatals tends to approach the following vocalic target for
-the coarticulation as well as accept some effects from the
-previous vocalic target. Accordingly, both phenomena are
-not contradictory to the look-ahead mechanism. This
-hypothesis will be verified in future studies, using
-simulations with our physiological articulatory model [10].
-ACKNOWLEDGMENTS
-This research has been supported in part by CREST of
-Japan Science and Technology. The authors would like
-to thank Pascal Perrier and Donna Erickson for their
-beneficial comments on this work.
-REFERENCES
-[1] D. Raymond, The Physiology of Speech and Hearing (Prentice-
-Hall, Englewood Cliffs, 1980).
-[2] L. Henke, ‘‘Dynamic articulatory model of speech production
-using computer simulation,’’ Doctoral Dissertation, MIT,
-(1966).
-[3] S. O¨ hman, ‘‘Coarticulation in VCV utterances: Spectrographic
-measurements,’’ J. Acoust. Soc. Am., 39, 151?168 (1966).
-[4] S. Kiritani, ‘‘Perturbation of the consonant and vowel
-articulation by a adjacent segments,’’ J. Acoust. Soc. Jpn. (J),
-34, 132?139 (1978).
-[5] D. Recasens, M. Pallares and J. Fontdevila, ‘‘A model of
-lingual coarticulation based on articulatory constraints,’’
-J. Acoust. Soc. Am., 102, 544?561 (1997).
-[6] K. Shirai and M. Honda, ‘‘Estimation of articulatory parameters
-from speech sound,’’ Trans. IECE, 61, 409?416 (1978).
-[7] S. Maeda, ‘‘Compensatory articulation during speech: evidence
-from the analysis of vocal tract shapes using an articulatory
-model,’’ in Speech Production and Speech Modelling, W. J.
-Hardcastle and A. Marchal, Eds. (Kluwer Academic Publishers,
-Dordrecht, 1990), pp. 131?149.
-[8] J. Dang and K. Honda, ‘‘A physiological model of a dynamic
-vocal tract for speech production,’’ Acoust. Sci. & Tech., 22,
-415?425 (2001).
-[9] J. Dang and K. Honda, ‘‘ Estimation of vocal tract shape from
-sounds via a physiological articulatory model,’’ J. Phonet., 30,
-511?532 (2002).
-[10] J. Dang and K. Honda, ‘‘Construction and control of a
-physiological articulatory model,’’ J. Acoust. Soc. Am., 115,
-853?870 (2004).
-[11] T. Okadome and M. Honda, ‘‘Generation of articulatory
-movements by using a kinematic triphone model,’’ J. Acoust.
-Soc. Am., 110, 453?463 (2001).
-[12] K. Stevens, Acoustic Phonetics (MIT Press, Cambridge, Mass.,
-2000).
-[13] K. Moll and R. Daniloff, ‘‘Investigation of timing of velar
-movement during speech,’’ J. Acoust. Soc. Am., 50, 678?684
-(1971).
-[14] N. Draper and H. Smith, Applied Regression Analysis, 2nd Ed.
-(John Wiley & Sons, New York, 1981), pp. 307?312.
-J. DANG et al.: COARTICULATION IN CONTINUOUS SPEECH
-329
+effects of the lateral phoneme
