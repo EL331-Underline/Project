@@ -131,6 +131,28 @@ def consistency_entry():
 
 def main():
     while True:
+        preload = input("create dataset from dataset folder? (y/n): ")
+        if preload == "y":
+            name = input("enter database name: ")
+            m = DatasetManager(name)
+            m.create("../dataset/AnwarKhoirul_20.txt", "K1")
+            m.create("../dataset/AokiToshiaki_4.txt", "K2")
+            m.create("../dataset/AsanoFumihiko_1.txt", "K3")
+            m.create("../dataset/ChenJiageng_6.txt", "K4")
+            m.create("../dataset/CheongKaiYuen_1.txt", "K5")
+            m.create("../dataset/DangJiannwu_5.txt", "K6")
+            m.create("../dataset/DefagoXavier_1.txt", "K7")
+            m.create("../dataset/IkedaKokolo_2.txt", "K8")
+            m.create("../dataset/InoguchiYasushi_1.txt", "K9")
+            m.create("../dataset/MatsumotoTadashi_19.txt", "K10")
+            m.create("../dataset/WirelessComm_unknown.txt", "Q")
+            break
+        elif preload == "n":
+            break
+        else:
+            print("entry y or n")
+
+    while True:
         operation = entry_point()
         if operation == "dataset":
             dataset_entry()
