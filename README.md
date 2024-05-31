@@ -5,16 +5,17 @@ create dataset from dataset folder? (y/n): y (データセットを作る,datase
 create dataset from dataset folder? (y/n): y (データセットを作らない
 enter database name (datasetの名前を入力) 
 
-select operation: dataset (データセットを作る操作に移動
-  |
-  _>   (dataset) select operation: 
+select operation: dataset (データセットを作る操作に移動  
+  |  
+  _>   (dataset) select operation:   
 
-        create 追加したいデータの相対パス　名前 (データセットにデータを追加
-        retrieve name (データセット内に一致する名前を探しそのデータを出す
-        retrieve-names  (データセットに登録されている名前一覧
-        update old_name new_name (old_name の名前を new_name に変更
-        delete name ((データセット内に一致する名前を探しそのデータを削除
-例
+        create 追加したいデータの相対パス　名前 (データセットにデータを追加  
+        retrieve name (データセット内に一致する名前を探しそのデータを出す  
+        retrieve-names  (データセットに登録されている名前一覧  
+        update old_name new_name (old_name の名前を new_name に変更  
+        delete name ((データセット内に一致する名前を探しそのデータを削除  
+例  
+```
 create dataset from dataset folder? (y/n): y
 enter database name: aaaa 
 select operation: dataset
@@ -34,14 +35,19 @@ None
 (dataset) select operation: create ../dataset/AnwarKhoiru1_20.txt K01
 (dataset) select operation: retrieve-names
 ['K02', 'K03', 'K04', 'K05', 'K06', 'K07', 'K08', 'K09', 'K10', 'Q', 'K01']
+```
+
+
+select operation: searcher (データセットを作る操作に移動  
+  |  
+  _>   (searcher) select operation:   
+         search word-token word (データセット内にあるすべてのdataからword が含まれる部分を探し前後１０単語を出力)  
+                    (searcher) save result? (y/n): y (結果を保存　(今日の日付のファイルができる  
 
 
 
-
-
-
-
-
+例
+```
 create dataset from dataset folder? (y/n): y
 enter database name: aaaa
 select operation: dataset
@@ -70,4 +76,7 @@ select operation: exit
 souhei@souhei-System-Product-Name:~/Project/src$ ls
 000-20240531-1840-it  aaaa           consistency.py  main.py
 __pycache__           comparison.py  dataset.py      searcher.py
+```
+
+
 
