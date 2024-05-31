@@ -78,5 +78,26 @@ souhei@souhei-System-Product-Name:~/Project/src$ ls
 __pycache__           comparison.py  dataset.py      searcher.py
 ```
 
+```
+create dataset from dataset folder? (y/n): y
+enter database name: aaaa
+select operation: consistency
+(consistency) enter path to database: aaaa
+(consistency) select operation: compare
+| decorrelators,path-by-path                                                                                                     | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+| decorrelators.111.                                                                                                             | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+| decorrelators.In                                                                                                               | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+| decorrelators.The                                                                                                              | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+| decorrelators.Therefore,                                                                                                       | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+| decorrelatorto                                                                                                                 | x   | x   | x   | x   | x   | x   | x   | x   | x   | x   | o |
+
+
+(consistency) save result? (y/n): y
+
+
+```
+
+
+
 
 
