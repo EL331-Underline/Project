@@ -77,7 +77,10 @@ souhei@souhei-System-Product-Name:~/Project/src$ ls
 000-20240531-1840-it  aaaa           consistency.py  main.py
 __pycache__           comparison.py  dataset.py      searcher.py
 ```
-
+select operation: consistency
+ -> consistency) enter path to database: file_name
+    (consistency) select operation: compare
+    (consistency) save result? (y/n): y (save result)
 ```
 create dataset from dataset folder? (y/n): y
 enter database name: aaaa
