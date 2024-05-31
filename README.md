@@ -35,4 +35,39 @@ None
 (dataset) select operation: retrieve-names
 ['K02', 'K03', 'K04', 'K05', 'K06', 'K07', 'K08', 'K09', 'K10', 'Q', 'K01']
 
-      
+
+
+
+
+
+
+
+create dataset from dataset folder? (y/n): y
+enter database name: aaaa
+select operation: dataset
+(dataset) enter path to database: aaaa
+(dataset) select operation: retrieve-names
+['K01', 'K02', 'K03', 'K04', 'K05', 'K06', 'K07', 'K08', 'K09', 'K10', 'Q']
+(dataset) select operation: exit
+select operation: searcher
+(searcher) enter path to database: aaaa
+(searcher) select operation: search word-token it
+                        the a-posteriori Log likelihood Ratios (LLRs) of thetwo decoders. Then, it can be further utilised in the iterative processing. Since the 
+                            low energy values forboth the 4PSK and 8PSK modulations. Therefore, it is reasonable to rely on the Shannon/SW limitcalculation using the 
+                        If thetransmitter is acknowledged that the frame is correctly detected, it continues to transmit the nextdata frame. However, if error happens 
+             such as real-time and resourceconstraints. In the existing object-oriented design, it is hardto deal with these constraints.In object-oriented developments, we analyze 
+                           to model concurrentsystems. Vijay K. Garg and M.T. Ragunath proposed it asalgebraic descriptions of the language of Petri nets[1].There are many 
+                                                      . We can omit the parentheses in a CRE if it doesnot become ambiguous. For example, we can simply writea* .b 
+                             PCM Device Driver DevelopmentTo evaluate our approach and to apply it in the developmentof a real application, we developed the PCM 
+                              calculating theoutput value of the channel. Once calc is invoked, it generatesthe output for 1 clock time.Synth is a synthesizer for 
+                         for hardware clock. Synth is synchronized withclock signals. Each time it synchronizes, it synthesizedan output value from the output values of 
+
+(searcher) save result? (y/n): y
+(searcher) select operation: eixt
+available operations: search, exit
+(searcher) select operation: exit
+select operation: exit
+souhei@souhei-System-Product-Name:~/Project/src$ ls
+000-20240531-1840-it  aaaa           consistency.py  main.py
+__pycache__           comparison.py  dataset.py      searcher.py
+
