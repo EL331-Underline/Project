@@ -1,10 +1,10 @@
 # Project
-Project/src  フォルダ内で(ここ重要)
-python src/main.py　で実行
-create dataset from dataset folder? (y/n): y (データセットを作る,datasetフォルダに入っているデータがdatasetに格納される)
-create dataset from dataset folder? (y/n): y (データセットを作らない
-enter database name (datasetの名前を入力) 
-
+Project/src  フォルダ内で(ここ重要)  
+python src/main.py　で実行  
+create dataset from dataset folder? (y/n): y (データセットを作る,datasetフォルダに入っているデータがdatasetに格納される)  
+create dataset from dataset folder? (y/n): y (データセットを作らない  
+enter database name (datasetの名前を入力)   
+## dataset   
 select operation: dataset (データセットを作る操作に移動  
   |  
   _>   (dataset) select operation:   
@@ -37,7 +37,7 @@ None
 ['K02', 'K03', 'K04', 'K05', 'K06', 'K07', 'K08', 'K09', 'K10', 'Q', 'K01']
 ```
 
-
+## searcher  
 select operation: searcher (データセットを作る操作に移動  
   |  
   _>   (searcher) select operation:   
@@ -77,6 +77,9 @@ souhei@souhei-System-Product-Name:~/Project/src$ ls
 000-20240531-1840-it  aaaa           consistency.py  main.py
 __pycache__           comparison.py  dataset.py      searcher.py
 ```
+
+
+## consistency  
 select operation: consistency  
  -> consistency) enter path to database: file_name  
     (consistency) select operation: compare  
