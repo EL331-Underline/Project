@@ -1,10 +1,13 @@
 # Project
+
 Project/src  フォルダ内で(ここ重要)  
-python src/main.py　で実行  
+python src/main.py で実行  
 create dataset from dataset folder? (y/n): y (データセットを作る,datasetフォルダに入っているデータがdatasetに格納される)  
 create dataset from dataset folder? (y/n): y (データセットを作らない  
 enter database name (datasetの名前を入力)   
+
 ## dataset   
+
 select operation: dataset (データセットを作る操作に移動  
   |  
   _>   (dataset) select operation:   
@@ -38,6 +41,7 @@ None
 ```
 
 ## searcher  
+
 select operation: searcher (データセットを作る操作に移動  
   |  
   _>   (searcher) select operation:   
@@ -80,11 +84,11 @@ __pycache__           comparison.py  dataset.py      searcher.py
 
 
 ## consistency  
-select operation: consistency  
+select operation: consistency
  -> consistency) enter path to database: file_name  
-    (consistency) select operation: compare  
+    (consistency) select operation: compare K1 K2 ... KN
     (consistency) save result? (y/n): y (save result)  
-```(comparison) select operation: exit
+```
 select operation: exit
 
 create dataset from dataset folder? (y/n): y
@@ -106,6 +110,7 @@ select operation: consistency
 ```
 
 ## comparison
+
 select operation: comparison
   -> comparison Q(name)  K0(name)  K1(name)
 
@@ -124,10 +129,3 @@ K1 ['the', 324] ['of', 150]
 select operation: exit
 
 ```
-
-
-
-
-
-
-

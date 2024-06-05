@@ -5,7 +5,7 @@ from typing import Literal
 from comparison import Comparison
 
 
-def entry_point() -> Literal["dataset", "searcher", "consistency","comparison", "exit"]:
+def entry_point() -> Literal["dataset", "searcher", "consistency", "comparison", "exit"]:
     while True:
         cmd = input("select operation: ")
         cmd = cmd.split()
@@ -113,10 +113,10 @@ def consistency_body(m: DatasetManager):
         cmd = input("(consistency) select operation: ")
         cmd = cmd.split()
         if cmd[0] == "compare":
-            if len(cmd) != 1:
+            if len(cmd) == 1:
                 print("invalid number of arguments")
                 continue
-            r = s.compare()
+            r = s.compare(cmd[1:])
             r.show()
             while True:
                 yn = input("(consistency) save result? (y/n): ")
@@ -141,6 +141,7 @@ def consistency_entry():
     consistency_body(m)
     del m
 
+
 def comparison_body(m: DatasetManager):
     s = Comparison(m)
     while True:
@@ -152,7 +153,7 @@ def comparison_body(m: DatasetManager):
                 continue
             Q = cmd[1]
 
-            r = s.compare(cmd[2:],Q)
+            r = s.compare(cmd[2:], Q)
             r.show()
         elif cmd[0] == "exit":
             return
@@ -160,12 +161,14 @@ def comparison_body(m: DatasetManager):
             print("available operations: ", end="")
             print("comparison, exit")
 
+
 def comparison_entry():
     cmd = input("(comparison) enter path to database: ")
     cmd = cmd.split()
     m = DatasetManager(cmd[0])
     comparison_body(m)
     del m
+
 
 def main():
     while True:
