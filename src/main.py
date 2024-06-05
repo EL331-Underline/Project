@@ -2,9 +2,10 @@ from dataset import DatasetManager
 from searcher import Searcher, SearcherQuery
 from consistency import Consistency
 from typing import Literal
+from comparison import Comparison
 
 
-def entry_point() -> Literal["dataset", "searcher", "consistency", "exit"]:
+def entry_point() -> Literal["dataset", "searcher", "consistency","comparison", "exit"]:
     while True:
         cmd = input("select operation: ")
         cmd = cmd.split()
@@ -17,6 +18,8 @@ def entry_point() -> Literal["dataset", "searcher", "consistency", "exit"]:
             return "searcher"
         elif cmd[0] == "consistency":
             return "consistency"
+        elif cmd[0] == "comparison":
+            return "comparison"
         elif cmd[0] == "exit":
             return "exit"
         else:
@@ -138,6 +141,31 @@ def consistency_entry():
     consistency_body(m)
     del m
 
+def comparison_body(m: DatasetManager):
+    s = Comparison(m)
+    while True:
+        cmd = input("(comparison) select operation: ")
+        cmd = cmd.split()
+        if cmd[0] == "comparison":
+            if len(cmd) < 3:
+                print("invalid number of arguments")
+                continue
+            Q = cmd[1]
+
+            r = s.compare(cmd[2:],Q)
+            r.show()
+        elif cmd[0] == "exit":
+            return
+        else:
+            print("available operations: ", end="")
+            print("comparison, exit")
+
+def comparison_entry():
+    cmd = input("(comparison) enter path to database: ")
+    cmd = cmd.split()
+    m = DatasetManager(cmd[0])
+    comparison_body(m)
+    del m
 
 def main():
     while True:
@@ -170,6 +198,8 @@ def main():
             searcher_entry()
         elif operation == "consistency":
             consistency_entry()
+        elif operation == "comparison":
+            comparison_entry()
         else:
             return
 
