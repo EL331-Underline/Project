@@ -111,8 +111,8 @@ class Consistency:
         self.counter = 0
         self.manager = manager
 
-    def compare(self) -> ConsistencyResult:
-        names = sorted(self.manager.retrieve_names())
+    def compare(self, qnames: List[str]) -> ConsistencyResult:
+        names = sorted(qnames)
         words = set()
         words_by_name = dict()
         for name in names:
@@ -154,7 +154,7 @@ class TestConsistency(unittest.TestCase):
             m.create(f1.name, "f1")
             m.create(f2.name, "f2")
             c = Consistency(m)
-            r = c.compare()
+            r = c.compare(["f1", "f2"])
             self.assertEqual(r.names, ["f1", "f2"])
             self.assertEqual(r.words, ["b", "c", "d", "a", "e"])
             for w in ["a", "b", "c", "d"]:
