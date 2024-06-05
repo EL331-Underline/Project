@@ -84,7 +84,9 @@ select operation: consistency
  -> consistency) enter path to database: file_name  
     (consistency) select operation: compare  
     (consistency) save result? (y/n): y (save result)  
-```
+```(comparison) select operation: exit
+select operation: exit
+
 create dataset from dataset folder? (y/n): y
 enter database name: aaaa
 select operation: consistency
@@ -102,6 +104,28 @@ select operation: consistency
 
 
 ```
+
+## comparison
+select operation: comparison
+  -> comparison Q(name)  K0(name)  K1(name)
+
+```
+
+create dataset from dataset folder? (y/n): y
+enter database name: aaaa
+select operation: comparison
+(comparison) enter path to database: aaaa 
+(comparison) select operation: comparison K01 K02 K03
+Q ['the', 227] ['and', 74] ['of', 56] ['in', 45] ['to', 43] ['is', 43] ['relay', 39] ['with', 28] ['The', 25] ['for', 24] ['are', 24] ['be', 22] ['can', 20] ['by', 19] ['a', 18] ['=', 18] ['at', 17] ['+', 14] ['proposed', 13] ['intra-link', 13] 
+K0 ['the', 263] ['of', 129] 
+K1 ['the', 324] ['of', 150] 
+......
+(comparison) select operation: exit
+select operation: exit
+
+```
+
+
 
 
 
